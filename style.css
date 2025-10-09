@@ -1,0 +1,147 @@
+:root {
+    --primary-text: #FFFFFF;
+    --accent-color: #00BFFF;
+    --success-color: #00FF00;
+    --dark-bg: #0A0A0A;
+    --window-bg: #1A1A1A;
+    --window-border: #333333;
+    --prompt-color: #777777;
+    --link-color: #00BFFF;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--dark-bg);
+}
+::-webkit-scrollbar-thumb {
+    background: #555555;
+    border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #888888;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--dark-bg);
+    background-image:
+        radial-gradient(circle at center, rgba(30, 30, 30, 0.5) 0%, rgba(0, 0, 0, 1) 100%);
+    background-attachment: fixed;
+    font-family: 'JetBrains Mono', 'Consolas', 'Courier New', monospace;
+    color: var(--primary-text);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.terminal-window {
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--window-border);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-out;
+}
+.terminal-window:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+}
+
+.terminal-header.windows-header {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    background-color: var(--window-bg);
+    border-bottom: 1px solid var(--window-border);
+    height: 35px;
+}
+.window-icon {
+    width: 25px;
+    height: 25px;
+    padding: 0 10px;
+    color: var(--success-color);
+    font-size: 1.1em;
+}
+.window-title {
+    color: var(--primary-text);
+    font-size: 0.95em;
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 5px;
+}
+.window-controls {
+    display: flex;
+    height: 100%;
+}
+.control-btn {
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: #AAAAAA;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    line-height: 1;
+}
+.control-btn:hover {
+    background-color: #333333;
+    color: var(--primary-text);
+}
+.control-btn.close:hover {
+    background-color: #FF4444;
+    color: white;
+}
+
+.terminal-body {
+    padding: 20px 20px 10px 20px;
+    background-color: var(--window-bg);
+    max-height: 75vh;
+    overflow-y: scroll;
+    line-height: 1.5;
+    background-image:
+        linear-gradient(to bottom, transparent 95%, rgba(0, 255, 0, 0.03) 100%);
+    background-size: 100% 2px;
+}
+
+.prompt {
+    margin-bottom: 5px;
+    color: var(--prompt-color);
+}
+.path {
+    color: var(--prompt-color);
+    font-weight: 500;
+}
+.command {
+    color: var(--primary-text);
+}
+strong {
+    color: var(--success-color);
+    font-weight: bold;
+}
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.cursor {
+    animation: blink-fade 0.75s step-end infinite;
+    color: white;
+    font-size: 1.1em;
+}
+
+@keyframes blink-fade {
+    from, to { opacity: 0 }
+    50% { opacity: 1; }
+}
