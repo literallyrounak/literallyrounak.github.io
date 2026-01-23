@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rounak</title>
+    <title>Rounak | Fedora Terminal</title>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,44 +11,43 @@
 
     <div class="terminal-window">
         <div class="terminal-header windows-header">
-            <img src="https://raw.githubusercontent.com/microsoft/terminal/master/res/terminal.ico" class="window-icon"/>
-            <span class="window-title">C:\Windows\System32\cmd.exe - Rounak</span>
+            <span class="window-title">rounak@fedora: ~</span>
             <div class="window-controls">
-                <span class="control-btn minimize">_</span>
+                <span class="control-btn minimize">−</span>
                 <span class="control-btn maximize">□</span>
-                <span class="control-btn close">x</span>
+                <span class="control-btn close">×</span>
             </div>
         </div>
 
         <div class="terminal-body" id="terminalBody">
             <header>
                 <p class="prompt">
-                    <span class="path">C:\Users\Rounak></span><span class="command">type readme.txt</span>
+                    <span class="path">rounak@fedora</span><span class="command">cat readme.txt</span>
                 </p>
                 <h1>Hello, I'm Rounak Kumar Gupta!</h1>
                 <p>I'm a Computer Science student studying in NIT Durgapur.</p>
                 <nav class="nav-links">
-                    <a href="#about" class="nav-link">ABOUT</a>
-                    <a href="#projects" class="nav-link">PROJECTS</a>
-                    <a href="#skills" class="nav-link">SKILLS</a>
-                    <a href="#contact" class="nav-link">CONTACT</a>
+                    <a href="#about" class="nav-link">./ABOUT</a>
+                    <a href="#projects" class="nav-link">./PROJECTS</a>
+                    <a href="#skills" class="nav-link">./SKILLS</a>
+                    <a href="#contact" class="nav-link">./CONTACT</a>
                 </nav>
-                <div class="divider">---</div>
+                <div class="divider">##################################################</div>
             </header>
 
             <section id="about">
                 <p class="prompt">
-                    <span class="path">C:\Users\Rounak></span><span class="command">type about.txt</span>
+                    <span class="path">rounak@fedora</span><span class="command">cat about.md</span>
                 </p>
                 <h2>About Me</h2>
                 <p>I'm just genuinely curious. I realize I'm happiest when I'm learning a new technology and immediately trying to build something with it. That loop, from picking up a skill to creating a project, is what drives me.</p>
             </section>
 
-            <div class="divider">---</div>
+            <div class="divider">--------------------------------------------------</div>
 
             <section id="projects">
                 <p class="prompt">
-                    <span class="path">C:\Users\Rounak></span><span class="command">dir /b projects</span>
+                    <span class="path">rounak@fedora</span><span class="command">ls -1 projects/</span>
                 </p>
                 <h2>Projects</h2>
                 <div class="project-list-clean">
@@ -64,7 +63,7 @@
                             A React app using the OMDB API to fetch and display movie data
                         </p>
                         <p class="project-link">
-                            <span class="meta-label">Link:</span> <a href="https://github.com/literallyrounak/filmbase" target="_blank">[View Repository]</a>
+                            <span class="meta-label">Link:</span> <a href="https://github.com/literallyrounak/filmbase" target="_blank">[view_repo]</a>
                         </p>
                     </article>
 
@@ -77,36 +76,52 @@
                             <span class="meta-label">Tech Stack:</span> <span class="meta-value">React.js</span>
                         </p>
                         <p class="project-description">
-                            A basic To-Do web application built with React to manage daily tasks.
+                            A basic To-Do web application built with React.
                         </p>
                         <p class="project-link">
-                            <span class="meta-label">Link:</span> <a href="https://github.com/literallyrounak/to-do-app" target="_blank">[View Repository]</a>
+                            <span class="meta-label">Link:</span> <a href="https://github.com/literallyrounak/to-do-app" target="_blank">[view_repo]</a>
                         </p>
                     </article>
 
                     <article class="project-item">
-                        <h3>2. Portfolio-Terminal-Style</h3>
+                        <h3>3. Slowpoke</h3>
                         <p class="project-meta">
-                            <span class="meta-label">Type:</span> <span class="meta-value">Static Web Design</span>
+                            <span class="meta-label">Type:</span> <span class="meta-value">Web Development</span>
                         </p>
                         <p class="project-meta">
-                            <span class="meta-label">Tech Stack:</span> <span class="meta-value">HTML, CSS, JavaScript (Vanilla)</span>
+                            <span class="meta-label">Tech Stack:</span> <span class="meta-value">React</span>
                         </p>
                         <p class="project-description">
-                            A sleek, modern portfolio showcasing skills using a unique terminal aesthetic.
+                            Fetches news articles from NewsAPI with a clean UI.
                         </p>
                         <p class="project-link">
-                            <span class="meta-label">Link:</span> <a href="#" target="_blank">[View Repository]</a>
+                            <span class="meta-label">Link:</span> <a href="https://github.com/literallyrounak/slowpoke" target="_blank">[view_repo]</a>
+                        </p>
+                    </article>
+
+                    <article class="project-item">
+                        <h3>4. Whismur</h3>
+                        <p class="project-meta">
+                            <span class="meta-label">Type:</span> <span class="meta-value">Web Development</span>
+                        </p>
+                        <p class="project-meta">
+                            <span class="meta-label">Tech Stack:</span> <span class="meta-value">React.js, Express, Socket.io</span>
+                        </p>
+                        <p class="project-description">
+                            Real-time chat application using WebSockets.
+                        </p>
+                        <p class="project-link">
+                            <span class="meta-label">Link:</span> <a href="https://github.com/literallyrounak/whismur" target="_blank">[view_repo]</a>
                         </p>
                     </article>
                 </div>
             </section>
 
-            <div class="divider">---</div>
+            <div class="divider">--------------------------------------------------</div>
 
             <section id="skills">
                 <p class="prompt">
-                    <span class="path">C:\Users\Rounak></span><span class="command">systeminfo /S-CAPS</span>
+                    <span class="path">rounak@fedora</span><span class="command">neofetch</span>
                 </p>
                 <h2>Skills</h2>
                 <div class="skills-list">
@@ -117,21 +132,21 @@
                 </div>
             </section>
 
-            <div class="divider">---</div>
+            <div class="divider">--------------------------------------------------</div>
 
             <section id="contact">
                 <p class="prompt">
-                    <span class="path">C:\Users\Rounak></span><span class="command">ping socials.net</span>
+                    <span class="path">rounak@fedora</span><span class="command">ping -c 3 socials.net</span>
                 </p>
                 <h2>Contact</h2>
-                <p>Let's connect and build something cool! I'm always open to discussing new projects.</p>
-                <p>Email: <a href="kumarguptarounak7@gmail.com">kumarguptarounak7@gmail.com</a></p>
+                <p>Let's connect and build something cool!</p>
+                <p>Email: <a href="mailto:kumarguptarounak7@gmail.com">kumarguptarounak7@gmail.com</a></p>
                 <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/rounakkumargupta</a></p>
                 <p>GitHub: <a href="https://github.com/literallyrounak" target="_blank">github.com/literallyrounak</a></p>
             </section>
 
             <p class="prompt">
-                <span class="path">C:\Users\User></span><span class="cursor">█</span>
+                <span class="path">rounak@fedora</span><span class="command"></span><span class="cursor"></span>
             </p>
         </div>
     </div>
