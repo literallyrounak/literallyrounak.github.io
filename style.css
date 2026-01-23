@@ -149,7 +149,7 @@ a:hover {
     display: inline-block;
     width: 10px;
     height: 20px;
-    background-color: var(--accent-color); /* Fedora blue cursor */
+    background-color: var(--accent-color);
     margin-left: 5px;
     animation: blink 1.2s infinite;
     vertical-align: middle;
@@ -158,4 +158,16 @@ a:hover {
 @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
+}
+
+pre {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7em;
+}
+
+@media (max-width: 600px) {
+    .neofetch-container {
+        flex-direction: column;
+        gap: 10px !important;
+    }
 }
