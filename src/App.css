@@ -1,38 +1,181 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --bg:      #fefefe;
+  --text:    #0f0f0f;
+  --border:  #0f0f0f;
+  --accent:  #ff3366;
+  --shadow:  8px 8px 0 #0f0f0f;
+  --shadow-sm: 4px 4px 0 #0f0f0f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.5;
+  min-height: 100dvh;
+}
+
+h1, h2, h3 {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5vw;
+}
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 12px solid var(--border);
+  margin: 4vh 4vw;
+  padding: 12vh 10vw;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.hero h1 {
+  font-size: clamp(4.5rem, 12vw, 14rem);
+  line-height: 0.9;
+  margin-bottom: 0.2em;
+}
+
+.tagline {
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.project-card {
+  border: 8px solid var(--border);
+  background: white;
+  padding: 2.5rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  position: relative;
+  margin-bottom: 4rem;
+  will-change: transform, box-shadow;
+}
+
+.project-card:hover {
+  transform: translate(8px, 8px);
+  box-shadow: 16px 16px 0 var(--border);
+}
+
+.project-card:active {
+  transform: translate(4px, 4px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.2rem;
+  border: 6px solid var(--border);
+  background: var(--text);
+  color: white;
+  font-family: 'Space Mono', monospace;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.btn:hover {
+  background: var(--accent);
+  transform: translate(6px, 6px);
+  box-shadow: var(--shadow);
+}
+
+.btn:focus-visible {
+  outline: 6px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.contact-section {
+  padding: 16vh 0 20vh;
+  text-align: center;
+  border-top: 12px solid var(--border);
+  background: var(--bg);
+}
+
+.contact-headline {
+  font-size: clamp(4.5rem, 12vw, 11rem);
+  line-height: 0.9;
+  margin-bottom: 3rem;
+  letter-spacing: -0.04em;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-link,
+.contact-link--accent {
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
+  padding: 1.6rem 4rem;
+  min-width: 380px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.contact-link--accent:hover {
+  background: #d92c59;
+  transform: translate(6px, 6px);
+  box-shadow: var(--shadow);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.contact-note {
+  margin-top: 6rem;
+  font-size: 1.6rem;
+  opacity: 0.7;
+}
+
+a:not(.btn):hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--accent);
+}
+
+.offset-left  { margin-left: -6vw; }
+.offset-right { margin-right: -6vw; margin-left: auto; width: 110%; }
+
+@media (max-width: 768px) {
+  .hero {
+    margin: 2vh 2vw;
+    padding: 8vh 6vw;
+    border-width: 8px;
+  }
+  
+  .offset-left, .offset-right {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
 }
