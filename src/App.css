@@ -26,6 +26,20 @@ body {
   line-height: 1.5;
   min-height: 100dvh;
 }
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--text);
+}
+
+body::selection {
+  background: #000;
+  color: white;
+}
 
 h1, h2, h3 {
   font-family: 'Space Mono', monospace;

@@ -59,8 +59,11 @@ function App() {
 
       <section className="contact-section">
         <h2 className="contact-headline">
-          LET'S MAKE<br />SOMETHING
+          LET'S TALK
         </h2>
+        
+        <br />
+        <br />
 
         <div className="contact-links">
           <a 
