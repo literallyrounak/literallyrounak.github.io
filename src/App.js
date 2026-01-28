@@ -57,6 +57,20 @@ function App() {
         </div>
       </section>
 
+        <section className="about-section">
+        <div className="about-content">
+          <h2 className="about-title">ABOUT ME.</h2>
+          <div className="about-text">
+            <p>
+              Hey, I'm Rounak. Self-taught and always learning. I enjoy building stuff that might look a bit off or unconventional at first, perfect isn't really my thing anyway, as long as it works and feels fun to make.
+            </p>
+            <p>
+              My journey started with basic HTML and CSS, and over time, I've dived into JavaScript, React, and various creative coding libraries. I love experimenting with new technologies and pushing the boundaries of what's possible on the web.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="contact-section">
         <h2 className="contact-headline">
           LET'S TALK
@@ -74,7 +88,7 @@ function App() {
           </a>
 
           <a 
-            href="https://www.linkedin.com/in/rounak-kumar-gupta-009b073a4/" 
+            href="https://www.linkedin.com/in/literallyrounak/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="btn contact-link contact-link--accent"
@@ -102,9 +116,27 @@ function App() {
         </div>
 
         <p className="contact-note">
-          Currently open for freelance / part-time (remote preferred)
+          Still learning every day, happy to collaborate while I figure it out.
         </p>
       </section>
+
+      <footer className="status-bar">
+        <div className="status-container">
+          <div className="status-item availability">
+            <span className="dot pulse"></span>
+            <span>AVAILABLE</span>
+          </div>
+          <div className="status-item">
+            LOC: DURGAPUR, IN
+          </div>
+          <div className="status-item">
+            {new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false })} IST
+          </div>
+          <div className="status-item">
+            BUILD: STR / INT
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
