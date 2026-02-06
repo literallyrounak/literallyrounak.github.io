@@ -35,5 +35,22 @@ export const projects = [
     image: "/slowpoke.png",
     liveLink: "https://literallyrounak.github.io/slowpoke",
     githubLink: "httpa://github.com/literallyrounak/slowpoke",
+  },
+  {
+    id: 5,
+    title: "Espeon",
+    description: "A React app which has thousand of leetcode problems company-wise (usually paid in leetcode premium) and allows you to filter them based on difficulty, frequency, and more.",
+    tech: ["React", "Pandas", "CSVtoJSON"],
+    image: "/espeon.png",
+    liveLink: "https://literallyrounak.github.io/espeon",
+    githubLink: "httpa://github.com/literallyrounak/espeon",
+  },
+  {
+    id: 6,
+    title: "Magikarp",
+    description: "A C++ tool which helps users to organize their messy folders by sorting them out.",
+    tech: ["C++", "Filesystem Library"],
+    image: "/magikarp.png",
+    githubLink: "httpa://github.com/literallyrounak/magikarp",
   }
 ];
